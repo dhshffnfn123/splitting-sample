@@ -1,1 +1,1 @@
-# ❇ 코드 스플리팅
+# ❇ Code-splitting
