@@ -1,3 +1,4 @@
+import loadable from '@loadable/component';
 import React from 'react';
 import { Suspense } from 'react';
 
@@ -19,3 +20,9 @@ const SplitMe = React.lazy(() => import('./SplitMe'));
 <Suspense fallback={<div>loading...</div>}> {/* fallback props를 통해 로딩 중에 보여 줄 JSX를 지정할 수 있다. */}
     <SplitMe />
 </Suspense>
+
+/* -------------------------------- loadable -------------------------------- */
+// 로딩 중에 다른 UI를 보여주기
+const loadingUI = loadable(() => import('./SplitMe'),{
+    fallback: <div>loading...</div>
+});
